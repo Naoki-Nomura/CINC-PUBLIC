@@ -1,3 +1,47 @@
+[ソースコード]
+//
+// @description:	CINC Sample
+// @author:		Naoki Nomura
+//
+int	a,b,c;
+int answer1;
+int answer2;
+main()	
+{	
+	answer1 = 0;
+	answer2 = 0;
+
+	a = 0;
+	while (a < 2){
+
+		b = 0;
+		while (b < 2){
+
+			c = 0;
+			while (c < 2){
+				answer1 = answer1 + 1;
+
+				c=c+1;
+			}
+
+			b=b+1;
+		}
+
+		a=a+1;
+	}
+
+CIDebug.vint("a >>>",a,2);
+CIDebug.vint("b >>>",b,2);
+CIDebug.vint("c >>>",c,2);
+CIDebug.vint("answer1 >>>",answer1,8);
+
+}
+
+
+
+
+
+[中間言語案2023.03]
 (DEVER	a	int)
 (DEVER	b	int)
 (DEVER	c	int)
@@ -32,4 +76,3 @@
 		(CIDebug.vint	"answer1 >>>"	answer1	8)
 	}
 )
-
