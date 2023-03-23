@@ -1,0 +1,35 @@
+(DEVER	a	int)
+(DEVER	b	int)
+(DEVER	c	int)
+(DEVER	answer1	int)
+(DEVER	answer2	int)
+(DEFUN	void	main
+	{
+		(T(=)	answer1	0)
+		(T(=)	answer2	0)
+		(T(=)	a	0)
+		(WHILE	(T(<)	a	2)
+			{
+				(T(=)	b	0)
+				(WHILE	(T(<)	b	2)
+					{
+						(T(=)	c	0)
+						(WHILE	(T(<)	c	2)
+							{
+								(T(=)	answer1	(T(+)	answer1	1))
+								(T(=)	c	(T(+)	c	1))
+							}
+						)
+						(T(=)	b	(T(+)	b	1))
+					}
+				)
+				(T(=)	a	(T(+)	a	1))
+			}
+		)
+		(CIDebug.vint	"a >>>"	a	2)
+		(CIDebug.vint	"b >>>"	b	2)
+		(CIDebug.vint	"c >>>"	c	2)
+		(CIDebug.vint	"answer1 >>>"	answer1	8)
+	}
+)
+
